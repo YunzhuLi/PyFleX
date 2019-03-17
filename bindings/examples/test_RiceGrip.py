@@ -1,3 +1,4 @@
+import os
 import numpy as np
 import pyflex
 import time
@@ -11,6 +12,8 @@ import matplotlib.pyplot as plt
 
 
 dt = 1. / 60.
+des_dir = 'test_RiceGrip'
+os.system('mkdir -p ' + des_dir)
 
 # n_particles = 768
 # n_shapes = 2
@@ -236,7 +239,6 @@ for r in range(grip_time):
         pyflex.set_positions(positions[r, i])
         pyflex.set_shape_states(shape_states[r, i])
 
-        pyflex.render()
-        time.sleep(0.1)
+        pyflex.render(capture=1, path=os.path.join(des_dir, 'render_%d.tga' % (r * time_step + i)))
 
 pyflex.clean()

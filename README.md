@@ -31,20 +31,69 @@ Start compiling
 
     cd bindings/
     mkdir build; cd build; cmake ..; make -j
-    export PYFLEXROOT=/home/yunzhu/Documents/PyFleX
-    export PYTHONPATH=${PYFLEXROOT}/bindings/build:$PYTHONPATH
-    export export LD_LIBRARY_PATH=${PYFLEXROOT}/external/SDL2-2.0.4/lib/x64:$LD_LIBRARY_PATH
 
-    python -c "import pyflex; pyflex.main()"
+Try with `FluidFall` example. A window will pop up showing the simulation results.
 
-    cd ${PYFLEX}/bindings/examples
-    python test.py
+    cd ${PYFLEXROOT}/bindings/examples
+    python test_FluidFall.py
 
 
 ## Demo
 
+Directly run the python script to see the environments. Screenshots will be stored in `${PYFLEXROOT}/bindings/examples/test_[env]/`.
+
+
+**FluidFall** - Two drops of high-viscosity fluids are falling down and merging with each other.
+
+    cd ${PYFLEXROOT}/bindings/examples
+    python test_FluidFall.py
+
+![](imgs/FluidFall.gif)
+
+
+**BoxBath** - A block of water is flushing a rigid cube.
+
+    cd ${PYFLEXROOT}/bindings/examples
+    python test_BoxBath.py
+
+![](imgs/BoxBath.gif)
+
+
+**FluidShake** - Shaking a box of fluids. The following script will first simulate the scene, and then playback while removing the frontal box wall for visualization.
+
+    cd ${PYFLEXROOT}/bindings/examples
+    python test_FluidShake.py
+
+![](imgs/FluidShake.gif)
+
+
+**RiceGrip** - Shaking a box of fluids.
+
+    cd ${PYFLEXROOT}/bindings/examples
+    python test_RiceGrip.py
+
+![](imgs/RiceGrip.gif)
+
+
+**RigidFall** - A stack of rigid cubes falling down.
+
+    cd ${PYFLEXROOT}/bindings/examples
+    python test_RigidFall.py
+
+![](imgs/RigidFall.gif)
+
+
+**FluidIceShake** - Shaking a box of fluids and a rigid cube. The following script will first simulate the scene, and then playback while removing the frontal box wall for visualization.
+
+    cd ${PYFLEXROOT}/bindings/examples
+    python test_FluidIceShake.py
+
+![](imgs/FluidIceShake.gif)
+
 
 ## APIs
+
+Please see the bottom of `bindings/pyflex.cpp` for the supported APIs.
 
 
 ## References

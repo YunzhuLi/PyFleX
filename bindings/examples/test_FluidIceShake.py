@@ -2,7 +2,6 @@ import os
 import numpy as np
 import pyflex
 import time
-import torch
 
 import scipy.spatial as spatial
 from sklearn.decomposition import PCA
@@ -79,7 +78,6 @@ def calc_shape_states(x_curr, x_last, box_dis):
 
 pyflex.init()
 
-use_gpu = torch.cuda.is_available()
 
 def rand_float(lo, hi):
     return np.random.rand() * (hi - lo) + lo
@@ -190,7 +188,7 @@ for i in range(len(boxes)-1):
     pyflex.add_box(halfEdge, center, quat)
 
 
-des_dir = 'FluidIceShake'
+des_dir = 'test_FluidIceShake'
 os.system('mkdir -p ' + des_dir)
 
 for i in range(time_step):
@@ -198,10 +196,5 @@ for i in range(time_step):
     pyflex.set_shape_states(shape_states[i, :-1])
 
     pyflex.render(capture=1, path=os.path.join(des_dir, 'render_%d.tga' % i))
-
-    if i == 0:
-        time.sleep(1)
-    else:
-        time.sleep(0.05)
 
 pyflex.clean()

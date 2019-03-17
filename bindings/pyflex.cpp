@@ -1610,7 +1610,7 @@ int DoUI() {
 
         int fontHeight = 13;
 
-        if (1) {
+        if (g_profile) {
             DrawImguiString(x, y, Vec3(1.0f), IMGUI_ALIGN_RIGHT, "Frame: %d", g_frame); y -= fontHeight * 2;
 
             if (!g_ffmpeg) {

@@ -12,3 +12,4 @@ bindings/build
 bindings/examples/tmp
 bindings/examples/*.avi
 bindings/examples/*/
+bindings/examples/*.gif

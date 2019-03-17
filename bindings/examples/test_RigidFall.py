@@ -1,7 +1,12 @@
+import os
 import numpy as np
 import pyflex
 import time
 import torch
+
+
+des_dir = 'test_RigidFall'
+os.system('mkdir -p ' + des_dir)
 
 
 def rand_float(lo, hi):
@@ -32,9 +37,6 @@ print("Scene Upper:", pyflex.get_scene_lower())
 print("Scene Lower:", pyflex.get_scene_upper())
 
 for i in range(150):
-    pyflex.step()
-
-    if i == 0:
-        time.sleep(1)
+    pyflex.step(capture=1, path=os.path.join(des_dir, 'render_%d.tga' % i))
 
 pyflex.clean()

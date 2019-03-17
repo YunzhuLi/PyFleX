@@ -1,3 +1,4 @@
+import os
 import numpy as np
 import pyflex
 import time
@@ -11,6 +12,8 @@ import matplotlib.pyplot as plt
 
 
 dt = 1. / 60.
+des_dir = 'test_FluidShake'
+os.system('mkdir -p ' + des_dir)
 
 time_step = 500
 time_step_rest = 30
@@ -139,6 +142,9 @@ shape_states = np.zeros((time_step, n_shapes, dim_shape_state))
 x_box = x_center
 v_box = 0
 
+
+# simulation
+
 for i in range(time_step):
     x_box_last = x_box
     x_box += v_box * dt
@@ -157,6 +163,8 @@ for i in range(time_step):
     pyflex.step()
 
 
+# playback
+
 pyflex.set_scene(6, scene_params, 0)
 for i in range(len(boxes)-1):
     halfEdge = boxes[i][0]
@@ -168,7 +176,6 @@ for i in range(time_step):
     pyflex.set_positions(positions[i])
     pyflex.set_shape_states(shape_states[i, :-1])
 
-    pyflex.render()
-    # time.sleep(1)
+    pyflex.render(capture=1, path=os.path.join(des_dir, 'render_%d.tga' % i))
 
 pyflex.clean()
