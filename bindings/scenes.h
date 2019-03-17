@@ -69,9 +69,6 @@ public:
 #include "scenes/yz_softbody.h"
 #include "scenes/yz_fluidshake.h"
 #include "scenes/yz_fluidiceshake.h"
-#include "scenes/yz_massrope.h"
-#include "scenes/yz_flag.h"
-#include "scenes/yz_softrod.h"
 
 #include "scenes/adhesion.h"
 #include "scenes/armadilloshower.h"
