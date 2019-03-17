@@ -39,4 +39,4 @@ Demo
 References
 ----------
 
-    Original NVIDIA FleX - 1.2.0 [readme](README_FleX.md)
+- Original NVIDIA FleX - 1.2.0 [readme](./README_FleX.md)
