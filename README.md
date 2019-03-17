@@ -1,23 +1,28 @@
 PyFleX
 ======
 
+[Nvidia FleX](https://developer.nvidia.com/flex) is an amazing particle-based simulator for simulating rigid bodies, fluids, clothing, etc. In this repo, we have developed a Python warpper for setting up and interacting with several different [enviroments](#demo).
 
-Compile demo
+Prerequisite
 ------------
 
+This code base is tested with Ubuntu 16.04 LTS and CUDA 9.1. Other versions might work but are not guaranteed.
+
+Compile and play with the original demo provided by NVIDIA FleX
+---------------------------------------------------------------
+
+First compile the demo
+
     cd demo/compiler/makelinux64/
-    make
+    make -j
+
+Then go to the target folder and start the demo!
+
+    cd ../../../bin/linux64
+    ./NvFlexDemoReleaseCUDA_x64
 
 
-Compile demo using cmake
-------------------------
-
-    cd examples/
-    mkdir build; cd build; cmake ..; make -j
-    ./example
-
-
-Compile demo with cmake & Pybind11
+Compile PyFleX with cmake & Pybind11
 ----------------------------------
 
     cd bindings/
@@ -32,8 +37,8 @@ Compile demo with cmake & Pybind11
     python test.py
 
 
-Demo
-----
+## Demo
+-------
 
 
 References

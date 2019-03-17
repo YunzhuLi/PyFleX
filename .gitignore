@@ -1,6 +1,7 @@
 .idea
 demo/compiler/makelinux64/.deps
 demo/compiler/makelinux64/build
+examples/build
 examples/cmake-build-debug
 bindings/cmake-build-debug
 bindings/build
