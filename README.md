@@ -1,6 +1,6 @@
 # PyFleX
 
-[Nvidia FleX](https://developer.nvidia.com/flex) is an amazing particle-based simulator for simulating rigid bodies, fluids, clothing, etc. In this repo, we have developed Python bindings for setting up and interacting with [enviroments](#demo) of different kind.
+[NVIDIA FleX](https://developer.nvidia.com/flex) is an amazing particle-based simulator for simulating interactions between rigid bodies, fluids, clothing, etc. In this repo, we have developed Python bindings for setting up and interacting with a few [enviroments](#demo) that we can used to evaluate different simulation and control algorithms.
 
 ## Prerequisite
 
@@ -27,7 +27,7 @@ Go to the root folder of `PyFleX`, and set up paths
     export PYTHONPATH=${PYFLEXROOT}/bindings/build:$PYTHONPATH
     export export LD_LIBRARY_PATH=${PYFLEXROOT}/external/SDL2-2.0.4/lib/x64:$LD_LIBRARY_PATH
 
-Start compiling
+Compile PyFleX
 
     cd bindings/
     mkdir build; cd build; cmake ..; make -j
@@ -40,10 +40,10 @@ Try with `FluidFall` example. A window will pop up showing the simulation result
 
 ## Demo
 
-Directly run the python script to see the environments. Screenshots will be stored in `${PYFLEXROOT}/bindings/examples/test_[env]/`.
+Following we provided 6 environments for you to play with. Directly run the python scripts to see the simulation results. Screenshots will be stored in `${PYFLEXROOT}/bindings/examples/test_[env]/`.
 
 
-**FluidFall** - Two drops of high-viscosity fluids are falling down and merging with each other.
+- **FluidFall** - Two drops of high-viscosity fluids are falling down and merging with each other.
 
     cd ${PYFLEXROOT}/bindings/examples
     python test_FluidFall.py
@@ -51,7 +51,7 @@ Directly run the python script to see the environments. Screenshots will be stor
 ![](imgs/FluidFall.gif)
 
 
-**BoxBath** - A block of water is flushing a rigid cube.
+- **BoxBath** - A block of water is flushing a rigid cube.
 
     cd ${PYFLEXROOT}/bindings/examples
     python test_BoxBath.py
@@ -59,7 +59,7 @@ Directly run the python script to see the environments. Screenshots will be stor
 ![](imgs/BoxBath.gif)
 
 
-**FluidShake** - Shaking a box of fluids. The following script will first simulate the scene, and then playback while removing the frontal box wall for visualization.
+- **FluidShake** - Shaking a box of fluids. The following script will first simulate the scene, and then playback the motion of the particles with the frontal wall removed for visualization.
 
     cd ${PYFLEXROOT}/bindings/examples
     python test_FluidShake.py
@@ -67,7 +67,7 @@ Directly run the python script to see the environments. Screenshots will be stor
 ![](imgs/FluidShake.gif)
 
 
-**RiceGrip** - Shaking a box of fluids.
+- **RiceGrip** - Grip an object that can deform both elastically and plastically (e.g., sticky rice).
 
     cd ${PYFLEXROOT}/bindings/examples
     python test_RiceGrip.py
@@ -75,7 +75,7 @@ Directly run the python script to see the environments. Screenshots will be stor
 ![](imgs/RiceGrip.gif)
 
 
-**RigidFall** - A stack of rigid cubes falling down.
+- **RigidFall** - A stack of rigid cubes falling down.
 
     cd ${PYFLEXROOT}/bindings/examples
     python test_RigidFall.py
@@ -83,7 +83,7 @@ Directly run the python script to see the environments. Screenshots will be stor
 ![](imgs/RigidFall.gif)
 
 
-**FluidIceShake** - Shaking a box of fluids and a rigid cube. The following script will first simulate the scene, and then playback while removing the frontal box wall for visualization.
+- **FluidIceShake** - Shaking a box of fluids and a rigid cube. The following script will first simulate the scene, and then playback the motion of the particles with the frontal wall removed for visualization.
 
     cd ${PYFLEXROOT}/bindings/examples
     python test_FluidIceShake.py
@@ -93,9 +93,9 @@ Directly run the python script to see the environments. Screenshots will be stor
 
 ## APIs
 
-Please see the bottom of `bindings/pyflex.cpp` for the supported APIs.
+Please see the example test scripts and the bottom of `bindings/pyflex.cpp` for available APIs.
 
 
 ## References
 
-- Original NVIDIA FleX - 1.2.0 [README](doc/README_FleX.md)
+- NVIDIA FleX - 1.2.0 [README](doc/README_FleX.md)
