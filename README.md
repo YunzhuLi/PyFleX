@@ -4,7 +4,7 @@
 
 ## Prerequisite
 
-This code base is tested with Ubuntu 16.04 LTS and CUDA 9.1. Other versions might work but are not guaranteed.
+This codebase is tested with Ubuntu 16.04 LTS and CUDA 9.1. Other versions might work but are not guaranteed.
 
 ## Compile and play with the original demo provided by NVIDIA FleX
 
@@ -59,7 +59,7 @@ Following we provided 6 environments for you to play with. Directly run the pyth
 ![](imgs/BoxBath.gif)
 
 
-**FluidShake** - Shaking a box of fluids. The following script will first simulate the scene, and then playback the motion of the particles with the frontal wall removed for visualization.
+**FluidShake** - Shake a box of fluids. The following script will first simulate the scene, and then playback the motion of the particles with the frontal wall removed for visualization.
 
     cd ${PYFLEXROOT}/bindings/examples
     python test_FluidShake.py
@@ -83,7 +83,7 @@ Following we provided 6 environments for you to play with. Directly run the pyth
 ![](imgs/RigidFall.gif)
 
 
-**FluidIceShake** - Shaking a box of fluids and a rigid cube. The following script will first simulate the scene, and then playback the motion of the particles with the frontal wall removed for visualization.
+**FluidIceShake** - Shake a box of fluids and a rigid cube. The following script will first simulate the scene, and then playback the motion of the particles with the frontal wall removed for visualization.
 
     cd ${PYFLEXROOT}/bindings/examples
     python test_FluidIceShake.py
