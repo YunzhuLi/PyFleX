@@ -43,7 +43,7 @@ Try with `FluidFall` example. A window will pop up showing the simulation result
 Following we provided 6 environments for you to play with. Directly run the python scripts to see the simulation results. Screenshots will be stored in `${PYFLEXROOT}/bindings/examples/test_[env]/`.
 
 
-- **FluidFall** - Two drops of high-viscosity fluids are falling down and merging with each other.
+**FluidFall** - Two drops of high-viscosity fluids are falling down and merging with each other.
 
     cd ${PYFLEXROOT}/bindings/examples
     python test_FluidFall.py
@@ -51,7 +51,7 @@ Following we provided 6 environments for you to play with. Directly run the pyth
 ![](imgs/FluidFall.gif)
 
 
-- **BoxBath** - A block of water is flushing a rigid cube.
+**BoxBath** - A block of water is flushing a rigid cube.
 
     cd ${PYFLEXROOT}/bindings/examples
     python test_BoxBath.py
@@ -59,7 +59,7 @@ Following we provided 6 environments for you to play with. Directly run the pyth
 ![](imgs/BoxBath.gif)
 
 
-- **FluidShake** - Shaking a box of fluids. The following script will first simulate the scene, and then playback the motion of the particles with the frontal wall removed for visualization.
+**FluidShake** - Shaking a box of fluids. The following script will first simulate the scene, and then playback the motion of the particles with the frontal wall removed for visualization.
 
     cd ${PYFLEXROOT}/bindings/examples
     python test_FluidShake.py
@@ -67,7 +67,7 @@ Following we provided 6 environments for you to play with. Directly run the pyth
 ![](imgs/FluidShake.gif)
 
 
-- **RiceGrip** - Grip an object that can deform both elastically and plastically (e.g., sticky rice).
+**RiceGrip** - Grip an object that can deform both elastically and plastically (e.g., sticky rice).
 
     cd ${PYFLEXROOT}/bindings/examples
     python test_RiceGrip.py
@@ -75,7 +75,7 @@ Following we provided 6 environments for you to play with. Directly run the pyth
 ![](imgs/RiceGrip.gif)
 
 
-- **RigidFall** - A stack of rigid cubes falling down.
+**RigidFall** - A stack of rigid cubes falling down.
 
     cd ${PYFLEXROOT}/bindings/examples
     python test_RigidFall.py
@@ -83,7 +83,7 @@ Following we provided 6 environments for you to play with. Directly run the pyth
 ![](imgs/RigidFall.gif)
 
 
-- **FluidIceShake** - Shaking a box of fluids and a rigid cube. The following script will first simulate the scene, and then playback the motion of the particles with the frontal wall removed for visualization.
+**FluidIceShake** - Shaking a box of fluids and a rigid cube. The following script will first simulate the scene, and then playback the motion of the particles with the frontal wall removed for visualization.
 
     cd ${PYFLEXROOT}/bindings/examples
     python test_FluidIceShake.py
