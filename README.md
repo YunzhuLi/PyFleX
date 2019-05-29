@@ -4,7 +4,9 @@
 
 ## Prerequisite
 
-This codebase is tested with Ubuntu 16.04 LTS and CUDA 9.1. Other versions might work but are not guaranteed.
+This codebase is tested with Ubuntu 16.04 LTS and CUDA 9.1. Other versions might work but are not guaranteed. Following command will install some necessary dependencies.
+
+    sudo apt-get install build-essential libgl1-mesa-dev freeglut3-dev
 
 ## Compile and play with the original demo provided by NVIDIA FleX
 
