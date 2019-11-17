@@ -4,7 +4,7 @@
 
 ## Using Docker
 
-If you are using Ubuntu 16.04 LTS and CUDA 9.1, you can continue with the steps on this page for compilation. If you are using **other versions** of Ubuntu or CUDA, we provide the pre-built Docker image and Dockerfile for compiling PyFleX. Please refer to our [Docker](bindings/docs/docker.md) page.
+If you are using Ubuntu 16.04 LTS and CUDA 9.1, you can continue with the steps on this page for compilation. If you are using **newer versions** of Ubuntu or CUDA, we provide the pre-built Docker image and Dockerfile for compiling PyFleX. Please refer to our [Docker](bindings/docs/docker.md) page.
 
 ## Prerequisite
 
