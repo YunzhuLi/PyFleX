@@ -18,7 +18,7 @@ We provide both Dockerfile and pre-built Docker container for compiling PyFleX. 
 docker pull yunzhuli/pyflex_16_04_cuda_9_1
 ```
 
-- Assuming you are using Anaconda, using the following command to run docker and mount the python environment and PyFleX into the docker container. Make sure you have replaced `PATH_TO_PyFleX` and `PATH_TO_ANACONDA` with the corresponding paths.
+- Assuming you are using Anaconda, using the following command to run docker, which will mount the python environment and PyFleX into the docker container. Make sure you have replaced `PATH_TO_PyFleX` and `PATH_TO_ANACONDA` with the corresponding paths.
 
 ```
 docker run \
