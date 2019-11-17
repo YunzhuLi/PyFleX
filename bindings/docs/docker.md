@@ -1,6 +1,6 @@
 # Using Docker for compiling PyFleX
 
-We provide both Dockerfile and pre-built Docker container for compiling PyFleX. We would like to give special thanks to [Yusufma03](https://github.com/Yusufma03) for providing this solution. 
+We provide both Dockerfile and pre-built Docker container for compiling PyFleX. After compilation, you will be able to use PyFleX outside docker. We would like to give special thanks to [Yusufma03](https://github.com/Yusufma03) for providing this solution.
 
 ## Prerequisite
 
