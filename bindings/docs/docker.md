@@ -21,27 +21,28 @@ docker pull yunzhuli/pyflex_16_04_cuda_9_1
 - Assuming you are using Anaconda, using the following command to run docker and mount the python environment and PyFleX into the docker container. Make sure you have replaced `PATH_TO_PyFleX` and `PATH_TO_ANACONDA` with the corresponding paths.
 
 ```
-docker run -v \
-    PATH_TO_PyFleX:/workspace/PyFleX \
-    PATH_TO_ANACONDA:/workspace/anaconda \
-    -it pyflex_16_04_cuda_9_1:latest
+docker run \
+  -v PATH_TO_PyFleX:/workspace/PyFleX \
+  -v PATH_TO_ANACONDA:/workspace/anaconda \
+  -it yunzhuli/pyflex_16_04_cuda_9_1:latest
 ```
 For example
 ```
-docker run -v \
-    ~/Documents/PyFleX/:/workspace/PyFleX \
-    ~/anaconda3/:/workspace/anaconda \
-    -it pyflex_16_04_cuda_9_1:latest
+docker run \
+  -v ~/Documents/PyFleX/:/workspace/PyFleX \
+  -v ~/anaconda3/:/workspace/anaconda \
+  -it yunzhuli/pyflex_16_04_cuda_9_1:latest
 ```
 
 - Now you are in the Docker environment. Go to the code repo and compile PyFleX
 
 ```
+export PATH="/workspace/anaconda/bin:$PATH"
 cd /workspace/PyFleX
 export PYFLEXROOT=${PWD}
 export PYTHONPATH=${PYFLEXROOT}/bindings/build:$PYTHONPATH
 export LD_LIBRARY_PATH=${PYFLEXROOT}/external/SDL2-2.0.4/lib/x64:$LD_LIBRARY_PATH
-cd PyFleX/bindings; mkdir build; cd build; cmake ..; make -j
+cd bindings; mkdir build; cd build; cmake ..; make -j
 ```
 
 - Now that PyFleX has properly compiled. You can move outside docker, export the environment variables and start playing with PyFleX.
