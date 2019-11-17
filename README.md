@@ -2,6 +2,10 @@
 
 [NVIDIA FleX](https://developer.nvidia.com/flex) is an amazing particle-based simulator for simulating interactions between rigid bodies, fluids, clothing, etc. In this repo, we have developed Python bindings for setting up and interacting with a few [enviroments](#demo) that we can used to evaluate different simulation and control algorithms.
 
+## Using Docker
+
+If you are using Ubuntu 16.04 LTS and CUDA 9.1, 
+
 ## Prerequisite
 
 This codebase is tested with Ubuntu 16.04 LTS and CUDA 9.1. Other versions might work but are not guaranteed. Following command will install some necessary dependencies.
@@ -27,7 +31,7 @@ Go to the root folder of `PyFleX`, and set up paths
 
     export PYFLEXROOT=${PWD}
     export PYTHONPATH=${PYFLEXROOT}/bindings/build:$PYTHONPATH
-    export export LD_LIBRARY_PATH=${PYFLEXROOT}/external/SDL2-2.0.4/lib/x64:$LD_LIBRARY_PATH
+    export LD_LIBRARY_PATH=${PYFLEXROOT}/external/SDL2-2.0.4/lib/x64:$LD_LIBRARY_PATH
 
 Compile PyFleX
 
