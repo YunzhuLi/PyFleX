@@ -2,6 +2,28 @@
 
 [NVIDIA FleX](https://developer.nvidia.com/flex) is an amazing particle-based simulator for simulating interactions between rigid bodies, fluids, clothing, etc. In this repo, we have developed Python bindings for setting up and interacting with a few [enviroments](#demo) that we can used to evaluate different simulation and control algorithms.
 
+## Citing
+
+If you find this codebase useful in your research, please consider citing:
+
+    @article{li2018learning,
+      title={Learning particle dynamics for manipulating rigid bodies, deformable objects, and fluids},
+      author={Li, Yunzhu and Wu, Jiajun and Tedrake, Russ and Tenenbaum, Joshua B and Torralba, Antonio},
+      journal={arXiv preprint arXiv:1810.01566},
+      year={2018}
+    }
+    
+    @article{macklin2014unified,
+      title={Unified particle physics for real-time applications},
+      author={Macklin, Miles and M{\"u}ller, Matthias and Chentanez, Nuttapong and Kim, Tae-Yong},
+      journal={ACM Transactions on Graphics (TOG)},
+      volume={33},
+      number={4},
+      pages={1--12},
+      year={2014},
+      publisher={ACM New York, NY, USA}
+    }
+
 ## Using Docker
 
 If you are using Ubuntu 16.04 LTS and CUDA 9.1, you can continue with the steps on this page for compilation. If you are using **newer versions** of Ubuntu or CUDA, we provide the pre-built Docker image and Dockerfile for compiling PyFleX. Please refer to our [Docker](bindings/docs/docker.md) page.
